@@ -2,5 +2,4 @@
 set -euo pipefail
 gcc "./$1" -lncurses
 shift
-./a.out "$@"
-rm a.out
+( set +e ; ./a.out "$@" ; rm a.out )
