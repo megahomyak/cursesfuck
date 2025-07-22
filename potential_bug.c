@@ -1,7 +1,8 @@
 // bug repro for Kitty
 //
 // BUG INFO:
-// The specified cell will get skipped visually if (the bottom right corner of the terminal contains any non-whitespace character or a character written with any attr (?)) and there was no refresh() (before and after) the move(), although the trick with refresh does NOT work for my https://github.com/megahomyak/megatui .
+// The specified cell will get skipped visually if (the bottom right corner of the terminal contains any non-whitespace character or a character written with any attr (?)) and there was no refresh() (before and after) the move(), although the trick with refresh does NOT work for my https://github.com/megahomyak/megatui (run "./run.sh" in https://github.com/megahomyak/megatui/tree/41dbd853471cb19b47304b01eca62d54392fb1da)
+// The bug is NOT present, applicable to megatui AND this code, in: Alacritty; Terminator; Konsole
 
 #include <ncurses.h>
 #include <stdbool.h>
